@@ -5,9 +5,9 @@ $(document).ready(function() {
     $(".dropdown-button").dropdown();
 })
 
-$(document).ready(function(){
-  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-  $('#modal1').modal();
+$(document).ready(function() {
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('#modal1').modal();
 });
 
 //UPCOMING SHOWS
@@ -36,17 +36,52 @@ var upcoming = [{
 ]
 
 
-var rowOpen = `<div class="row">`
-var pictureColOpen = `<div class="col l5 s12">`
-var articleColOpen = `<div class="col l7 s12">`
-var divClose = `</div>`
-var br = `</br>`
+// var rowOpen = `<div class="row">`
+// var pictureColOpen = `<div class="col l5 s12">`
+// var articleColOpen = `<div class="col l7 s12">`
+// var divClose = `</div>`
+// var br = `</br>`
+
+//APPEND OBJECTS INTO MAIN BODY
+// function appendArticle() {
+//     for (var i = 0; i < upcoming.length; i++) {
+//         $('.shows-main').append(rowOpen + pictureColOpen + `<img src="${upcoming[i].img}" alt="${upcoming[i].imgAlt}">` + divClose + articleColOpen + `<h3>${upcoming[i].title}</h3>` + `<h5>${upcoming[i].date}</h5>` + `<p>${upcoming[i].about}</p>` + `<a href="../html/tickets.html">Buy tickets here!</a>`+divClose + divClose + `<div class="divider"></div>` + br)
+//     }
+// }
+
+var modalGuts =
+    `<div id="modal1" class="modal modal-fixed-footer">
+<div class="modal-content">
+<h4>${this.title}</h4>
+<p>A bunch of text</p>
+</div>
+<div class="modal-footer">
+<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+</div>
+</div>`
+
+
 
 //APPEND OBJECTS INTO MAIN BODY
 function appendArticle() {
+  var resultString;
     for (var i = 0; i < upcoming.length; i++) {
-        $('.shows-main').append(rowOpen + pictureColOpen + `<img src="${upcoming[i].img}" alt="${upcoming[i].imgAlt}">` + divClose + articleColOpen + `<h3>${upcoming[i].title}</h3>` + `<h5>${upcoming[i].date}</h5>` + `<p>${upcoming[i].about}</p>` + `<a href="../html/tickets.html">Buy tickets here!</a>`+divClose + divClose + `<div class="divider"></div>` + br)
+      resultString= `<img src="${upcoming[i].img}" alt="${upcoming[i].imgAlt}">` +
+        `</div>` +
+        `<div class="col l7 s12">` +
+        `<h3>${upcoming[i].title}</h3>` +
+        `<h5>${upcoming[i].date}</h5>` +
+        `<p>${upcoming[i].about}</p>`
     }
+    return resultString;
 }
 
-// appendArticle()
+
+$('.shows-main').append(
+    `<div class="row">` +
+    `<div class="col l5 s12">` + appendArticle() + `<a class="modal-trigger waves-effect waves-light btn" href="#modal1">Buy tickets</a>` +
+    modalGuts +
+    `</div>` +
+    `</div>` +
+    `<div class="divider"></div>` +
+    `</br>`)

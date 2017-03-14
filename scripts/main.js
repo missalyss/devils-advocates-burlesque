@@ -2,12 +2,23 @@ console.log("sanity");
 
 // ACTIVATES DROPDOWN MENU ON HOMEPAGE
 $(document).ready(function() {
-    $(".dropdown-button").dropdown();
+    $(".dropdown-button").dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: true, // Does not change width of dropdown to that of the activator
+      hover: false, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+      stopPropagation: false // Stops event propagation
+    });
 })
+
+
 
 //UPCOMING SHOWS
 var upcoming = [{
-        img: `<iframe width="560" height="315" src="https://www.youtube.com/embed/vAB2KSiBn-s" frameborder="0" allowfullscreen></iframe>`,
+        img: `<div class="video-container"> <iframe width="560" height="315" src="https://www.youtube.com/embed/vAB2KSiBn-s" frameborder="0" allowfullscreen></iframe></div>`,
         imgAlt: "trying to put in a video",
         title: "Beauty in Bedlam Trailer",
         subtitle: "Our show last November",

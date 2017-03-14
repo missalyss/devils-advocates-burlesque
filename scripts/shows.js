@@ -7,31 +7,43 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('#modal1').modal();
+    $('#0').modal();
 });
+$(document).ready(function() {
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('#1').modal();
+});
+$(document).ready(function() {
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('#2').modal();
+});
+
 
 //UPCOMING SHOWS
 var upcoming = [{
-        img: "http://fillmurray.com/300/300",
-        imgAlt: "this is picture",
-        title: "Den of Indecency",
-        date: "March 3, 11:00pm",
-        about: "Now what are the possibilities of warp drive? Cmdr Riker's nervous system has been invaded by an unknown microorganism. The organisms fuse to the nerve, intertwining at the molecular level. That's why the transporter's biofilters couldn't extract it. The vertex waves show a K-complex corresponding to an REM state. The engineering section's critical. Destruction is imminent. Their robes contain ultritium, highly explosive, virtually undetectable by your transporter."
-    },
-    {
-        img: "http://fillmurray.com/400/300",
-        imgAlt: "this is picture",
-        title: "Flora and Fauna",
-        date: "April 8, 9, 10",
-        about: "Now what are the possibilities of warp drive? Cmdr Riker's nervous system has been invaded by an unknown microorganism. The organisms fuse to the nerve, intertwining at the molecular level. That's why the transporter's biofilters couldn't extract it. The vertex waves show a K-complex corresponding to an REM state. The engineering section's critical. Destruction is imminent. Their robes contain ultritium, highly explosive, virtually undetectable by your transporter."
-    },
-    {
-        img: "http://fillmurray.com/350/350",
-        imgAlt: "this is picture",
-        title: "Guilty Pleasures",
-        date: "May 5 11:00pm",
-        about: "Now what are the possibilities of warp drive? Cmdr Riker's nervous system has been invaded by an unknown microorganism. The organisms fuse to the nerve, intertwining at the molecular level. That's why the transporter's biofilters couldn't extract it. The vertex waves show a K-complex corresponding to an REM state. The engineering section's critical. Destruction is imminent. Their robes contain ultritium, highly explosive, virtually undetectable by your transporter."
-    }
+    id: '#0',
+    img: "http://fillmurray.com/300/300",
+    imgAlt: "this is picture",
+    title: "Den of Indecency",
+    date: "March 3, 11:00pm",
+    about: "Now what are the possibilities of warp drive? Cmdr Riker's nervous system has been invaded by an unknown microorganism. The organisms fuse to the nerve, intertwining at the molecular level. That's why the transporter's biofilters couldn't extract it. The vertex waves show a K-complex corresponding to an REM state. The engineering section's critical. Destruction is imminent. Their robes contain ultritium, highly explosive, virtually undetectable by your transporter."
+},
+{
+    id: '#1',
+    img: "http://fillmurray.com/400/300",
+    imgAlt: "this is picture",
+    title: "Flora and Fauna",
+    date: "April 8, 9, 10",
+    about: "Communication is not possible. The shuttle has no power. Using the gravitational pull of a star to slingshot back in time? We are going to Starbase Montgomery for Engineering consultations prompted by minor read-out anomalies. Probes have recorded unusual levels of geological activity in all five planetary systems. Assemble a team. Look at records of the Drema quadrant. Would these scans detect artificial transmissions as well as natural signals?"
+},
+{
+    id: '#2',
+    img: "http://fillmurray.com/350/350",
+    imgAlt: "this is picture",
+    title: "Guilty Pleasures",
+    date: "May 5 11:00pm",
+    about: "Deflector power at maximum. Energy discharge in six seconds. Warp reactor core primary coolant failure. Fluctuate phaser resonance frequencies. Resistance is futile. Recommend we adjust shield harmonics to the upper EM band when proceeding. These appear to be some kind of power-wave-guide conduits which allow them to work collectively as they perform ship functions. Increase deflector modulation to upper frequency band. Resistance is futile."
+}
 
 ]
 
@@ -49,39 +61,49 @@ var upcoming = [{
 //     }
 // }
 
-var modalGuts =
-    `<div id="modal1" class="modal modal-fixed-footer">
-<div class="modal-content">
-<h4>${this.title}</h4>
-<p>A bunch of text</p>
-</div>
-<div class="modal-footer">
-<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-</div>
-</div>`
 
 
 
 //APPEND OBJECTS INTO MAIN BODY
 function appendArticle() {
-  var resultString;
-    for (var i = 0; i < upcoming.length; i++) {
-      resultString= `<img src="${upcoming[i].img}" alt="${upcoming[i].imgAlt}">` +
+  var $pictureCol
+  var $objString;
+
+  for (var i = 0; i < upcoming.length; i++) {
+    var $modalBtn;
+    var $modalGuts;
+        $pictureCol = `<div class="col l5 s12">
+      <img src="${upcoming[i].img}" alt="${upcoming[i].imgAlt}">
+      </div>`
+
+        $objString =
+            `<div class="col l7 s12">
+      <h3>${upcoming[i].title}</h3>
+      <h5>${upcoming[i].date}</h5>
+      <p>${upcoming[i].about}</p>`
+
+        $modalBtn = `<a class="modal-trigger waves-effect waves-light btn" href="${upcoming[i].id}">Buy tickets</a>`
+
+        $modalGuts =
+            `<div id="${upcoming[i].id}" class="modal modal-fixed-footer">
+      <div class="modal-content">
+      <h4>${upcoming[i].title}</h4>
+      <p>${upcoming[i].about}</p>
+      </div>
+      <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Go to Billing</a>
+      </div>
+      </div>`
+//the modal button wont open. everything else seems pretty ok.
+
+
+      console.log($('.shows-main').append(
+        `<div class="row">` + $pictureCol + $objString + $modalBtn + $modalGuts +
         `</div>` +
-        `<div class="col l7 s12">` +
-        `<h3>${upcoming[i].title}</h3>` +
-        `<h5>${upcoming[i].date}</h5>` +
-        `<p>${upcoming[i].about}</p>`
+        `</div>` +
+        `<div class="divider"></div>` +
+        `</br>`))
     }
-    return resultString;
 }
 
-
-$('.shows-main').append(
-    `<div class="row">` +
-    `<div class="col l5 s12">` + appendArticle() + `<a class="modal-trigger waves-effect waves-light btn" href="#modal1">Buy tickets</a>` +
-    modalGuts +
-    `</div>` +
-    `</div>` +
-    `<div class="divider"></div>` +
-    `</br>`)
+appendArticle()

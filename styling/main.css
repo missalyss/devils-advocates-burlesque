@@ -2,8 +2,20 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: #f4eee2;
 }
 
 main {
   flex: 1 0 auto;
+}
+
+.nav-wrapper {
+  background-color: #288f84;
+  text-align: center;
+  height: 85px;
+}
+
+footer.page-footer {
+  background-color: #288f84;
+  text-align: center;
 }

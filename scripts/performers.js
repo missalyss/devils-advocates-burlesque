@@ -10,7 +10,7 @@ var cast = [{
         img: "./images/burlesque/Hersera2-cropped.jpg",
         imgAlt: "Hersera",
         name: "Hersera",
-        about: "Hersera is a sultry vagabond who's picked up more than a trick or two in her wonderings. Slipping between world's, she's learned anything from the art of belly dance to the perfect cup of tea, and even a little magic. Come see this mysterious, lonely traveler to get a taste of her eclectic charms."
+        about: "Hersera is a sultry vagabond who's picked up more than a trick or two in her wanderings. Slipping between world's, she's learned anything from the art of belly dance to the perfect cup of tea, and even a little magic. Come see this mysterious, lonely traveler to get a taste of her eclectic charms."
     },
     {
         img: "./images/burlesque/Boozy2-cropped.jpg",

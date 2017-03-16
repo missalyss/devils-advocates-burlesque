@@ -10,7 +10,13 @@
 //    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
 //  });
 
-console.log($('#tix-quantity'));
+$('#tix-quantity').append(
+    "Tickets: " + localStorage.getItem("tixQuant")
+)
+$('#price-total').append(
+    "Total: $" + localStorage.getItem("subCost")
+)
+
 
 $('#email-setup').on('submit', function(e) {
     e.preventDefault()
@@ -30,10 +36,10 @@ $('#email-setup').on('submit', function(e) {
             text: $firstName + ' ' + $lastName + ',\n\
             \n\
             Thank you for your recent purchase to Devil\'s Advocates upcoming show, "Flora and Fauna."\n\
-            You have purchased\n\
-            2 tickets for \n\
+            You have purchased\n' +
+                localStorage.getItem("tixQuant") + ' tickets for \n\
             April 7 at 8:00pm\n\
-            Total: $34 \n\
+            Total:' + localStorage.getItem("subCost") + '\n\
             Please keep this email, as this is your receipt and ticket into the show. \n\
             We are excited to see you there! \n\
             \n\

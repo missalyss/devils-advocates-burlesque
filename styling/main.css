@@ -2,9 +2,10 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #f2f6fa;
+  background-color: #f6f6f6;
   font-size: 16px;
-  font-family: Gill Sans Light, sans-serif;
+  font-family: Gill Sans, sans-serif;
+  font-weight: lighter;
 }
 
 main {
@@ -24,14 +25,22 @@ nav {
   padding-top: 8px;
   display: flex;
   align-items: center;
-  font-size: 1rem;
 }
 
 main h1 {
-  font-family: Victoriandeco Regular, Gill Sans Light, sans-serif;
+  font-family: Victoriandeco Regular, Gill Sans, sans-serif;
   text-align: center;
   color: #6e0f77;
   font-size: 6rem;
+}
+
+h2, h3 {
+  font-family: Gill Sans, sans-serif;
+  font-weight: lighter;
+  font-stretch: expanded;
+  text-align: left;
+  color: #6e0f77;
+  font-size: 3rem;
 }
 
 footer.page-footer {

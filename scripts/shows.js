@@ -21,22 +21,38 @@ $(document).ready(function() {
 $(document).ready(function() {
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('#0').modal();
-    // $('#1').modal();
-    // $('#2').modal();
+    $('#1').modal();
+    $('#2').modal();
 });
 
 var subResult;
-$('#ticketNumber').on('change', function() {
-  var result
-  var numOfTix = $('#ticketNumber').val()
-  var typeOfTix = $('#ticketType').val()
-  subResult = numOfTix *= typeOfTix
-  console.log(subResult);
+
+$('#ticketNumber, #ticketType').on('change', function() {
+    var numOfTix = $('#ticketNumber').val()
+    var typeOfTix = $('#ticketType').val()
+    var result
+    subResult = numOfTix * typeOfTix
+    console.log(subResult);
     $('#subtotal').replaceWith(function() {
-      result = `<p id="subtotal">Subtotal: $${subResult}</p>`;
-      return result;
+        result = `<p id="subtotal">Subtotal: $${subResult}</p>`;
+        return result;
     })
+    var cart = [
+        numOfTix, typeOfTix, subResult
+    ]
+    localStorage.setItem("tixQuant", cart[0])
+    localStorage.setItem("tixType", cart[1])
+    localStorage.setItem("subCost", cart[2])
 })
+
+
+
+// function saveCart() {
+// }
+//
+// saveCart()
+//
+// localStorage.setItem("username", "joe")
 
 
 //UPCOMING SHOWS
@@ -50,10 +66,10 @@ var upcoming = [{
     },
     {
         id: '#1',
-        img: "http://fillmurray.com/400/300",
+        img: "http://fillmurray.com/300/300",
         imgAlt: "this is picture",
-        title: "Flora and Fauna",
-        date: "April 8, 9, 10",
+        title: "this is a show",
+        date: "April 8, 9, 10 show time",
         about: "Communication is not possible. The shuttle has no power. Using the gravitational pull of a star to slingshot back in time? We are going to Starbase Montgomery for Engineering consultations prompted by minor read-out anomalies. Probes have recorded unusual levels of geological activity in all five planetary systems. Assemble a team. Look at records of the Drema quadrant. Would these scans detect artificial transmissions as well as natural signals?"
     },
     {
@@ -69,72 +85,42 @@ var upcoming = [{
 
 
 
-//APPEND OBJECTS INTO MAIN BODY
-// function appendArticle() {
-//   var $pictureCol
-//   var $objString;
-//
-//   for (var i = 0; i < upcoming.length; i++) {
-//     var $modalBtn;
-//     var $modalGuts;
-//         $pictureCol = `<div class="col l5 s12">
-//       <img src="${upcoming[i].img}" alt="${upcoming[i].imgAlt}">
-//       </div>`
-//
-//         $objString =
-//             `<div class="col l7 s12">
-//       <h3>${upcoming[i].title}</h3>
-//       <h5>${upcoming[i].date}</h5>
-//       <p>${upcoming[i].about}</p>`
-//
-//         $modalBtn = `<a class="modal-trigger waves-effect waves-light btn" href="${upcoming[i].id}">Buy tickets</a>`
-//
-//         $modalGuts =
-//             `<div id="${upcoming[i].id}" class="modal modal-fixed-footer">
-//       <div class="modal-content">
-//       <h4>${upcoming[i].title}</h4>
-//       <p>${upcoming[i].about}</p>
-//       </div>
-//       <div class="modal-footer">
-//       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Go to Billing</a>
-//       </div>
-//       </div>`
-// //the modal button wont open. everything else seems pretty ok.
-//
-//
-//       console.log($('.shows-main').append(
-//         `<div class="row">` + $pictureCol + $objString + $modalBtn + $modalGuts +
-//         `</div>` +
-//         `</div>` +
-//         `<div class="divider"></div>` +
-//         `</br>`))
-//     }
-// }
-//
-// appendArticle()
+// APPEND OBJECTS INTO MAIN BODY
 
-// console.log($('.shows-main').append(
-//
-// `<div class="row">
-//   <div class="col l5 s12">
-//     <img src="${upcoming[0].img}" alt="${upcoming[0].imgAlt}">
-//   </div>
-//   <div class="col l7 s12">
-//     <h3>${upcoming[0].title}</h3>
-//     <h5>${upcoming[0].date}</h5>
-//     <p>${upcoming[0].about}</p>
-//     <a class="modal-trigger waves-effect waves-light btn" href="#0">Buy tickets</a>
-//     <div id="0" class="modal modal-fixed-footer">
-//       <div class="modal-content">
-//         <h4>${upcoming[0].title}</h4>
-//         <p>${upcoming[0].about}</p>
-//       </div>
-//       <div class="modal-footer">
-//         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Go to Billing</a>
-//       </div>
-//     </div>
-//   </div>
-// </div>
-// <div class="divider"></div>
-// </br>`
-// ))
+function appendArticle1() {
+    var $pictureCol
+    var $objString;
+    var $modalBtn;
+    var $modalGuts;
+    pictureCol = `<img src="${upcoming[1].img}" alt="${upcoming[1].imgAlt}">`
+
+    objString =
+        `<h3>${upcoming[1].title}</h3>
+      <h5>${upcoming[1].date}</h5>
+      <p>${upcoming[1].about}</p>`
+
+    modalBtn = `<a class="modal-trigger waves-effect waves-light btn" href="${upcoming[1].id}">Buy tickets</a>`
+
+    modalGuts =
+    `<p>hey</p>`
+      //   `<div id="${upcoming[1].id}" class="modal modal-fixed-footer">
+      // <div class="modal-content">
+      // <h4>${upcoming[1].title}</h4>
+      // <p>${upcoming[1].about}</p>
+      // </div>
+      // <div class="modal-footer">
+      // <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Go to Billing</a>
+      // </div>
+      // </div>`
+    //the modal button wont open. everything else seems pretty ok.
+
+
+  $('#show1pic').append(
+      `<img src="${upcoming[1].img}" alt="${upcoming[1].imgAlt}">`
+    )
+console.log($('#show1art').append(
+    objString + modalBtn
+  ))
+}
+
+appendArticle1()

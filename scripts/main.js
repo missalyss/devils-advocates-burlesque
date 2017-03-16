@@ -15,7 +15,6 @@ $(document).ready(function() {
 })
 
 
-
 //UPCOMING SHOWS
 var upcoming = [{
         img: `<div class="video-container"> <iframe width="560" height="315" src="https://www.youtube.com/embed/vAB2KSiBn-s" frameborder="0" allowfullscreen></iframe></div>`,

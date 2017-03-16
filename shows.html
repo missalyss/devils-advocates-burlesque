@@ -9,6 +9,7 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
   <script defer type="text/javascript" src="./scripts/tickets.js"></script>
   <script defer type="text/javascript" src="./scripts/shows.js"></script>
+  <script defer type="text/javascript" scr="./scrips/main.js"></script>
 
 
   <!-- STYLING -->
@@ -23,14 +24,16 @@
       <div class="nav-wrapper">
         <div class="container">
           <ul class="left">
-            <li><a href="./index.html"><img src="./images/burlesque/dalogo-cropped.jpeg" alt="DA Logo"></a></li>
+            <li>
+              <a href="./index.html"><img src="./images/burlesque/dalogo-cropped.jpeg" alt="DA Logo"></a>
+            </li>
             <ul id="about-dropdown" class="dropdown-content">
               <li><a href="./performers.html">Performers</a></li>
               <li class="divider"></li>
               <li><a href="./contact.html">Contact</a></li>
             </ul>
             <li><a class="dropdown-button" href="#!" data-activates="about-dropdown">About</a></li>
-              <li><a href="./shows.html">Events</a></li>
+            <li><a href="./shows.html">Events</a></li>
             <li><a href="./gallery.html">Gallery</a></li>
           </ul>
         </div>
@@ -44,44 +47,42 @@
       <h1>The Devil's Advocates</h1>
       <h3>Come to our next show!</h3>
 
-      <div id="show0" class="row">
+      <!-- <div id="show0" class="row">
         <div id="show0pic" class="col l5 s12">
           <img src="./images/burlesque/The_Devils_Advocates_Burlesque_sq-cropped.jpg" alt="${upcoming[0].imgAlt}">
         </div>
         <div id="show0art" class="col l7 s12">
           <h3>Flora and Fauna</h3>
           <h5>April 7, 8, 9 8:00pm</h5>
-          <p>Shields up. I recommend we transfer power to phasers and arm the photon torpedoes. Something strange on the detector circuit. The weapons must have disrupted our communicators. You saw something as tasty as meat, but inorganically materialized
-            out of patterns used by our transporters. Captain, the most elementary and valuable statement in science, the beginning of wisdom, is 'I do not know.' All transporters off.</p>
+          <p>Shedo not know.' All transporters off.</p>
 
-          <!-- MODAL BUTTON AND CONTENT -->
-          <a class="modal-trigger waves-effect waves-light btn" href="#0">Buy tickets</a>
-          <div id="0" class="modal modal-fixed-footer">
-            <div class="modal-content">
-              <h4>Flora and Fauna</h4>
-              <p>Shields up. I recommend we transfer power to phasers and arm the photon torpedoes. Something strange on the detector circuit. The weapons must have disrupted our communicators. You saw something as tasty as meat, but inorganically materialized
-                out of patterns used by our transporters. Captain, the most elementary and valuable statement in science, the beginning of wisdom, is 'I do not know.' All transporters off.</p>
-              <div class="row">
+      <a class="modal-trigger waves-effect waves-light btn" href="#0">Buy tickets</a>
+      <div id="0" class="modal modal-fixed-footer">
+        <div class="modal-content">
+          <h4>Flora and Fauna</h4>
+          <p>Shields up. I recommend we ts off.</p>
 
-                <div class="input-field col s4">
-                  <select id="ticketDate">
+          <div class="row">
+
+            <div class="input-field col s4">
+              <select id="ticketDate">
                   <option value="" disabled selected>Select Date</option>
                   <option value="apr7">April 7 8:00pm</option>
                   <option value="apr8">April 8 8:00pm</option>
                   <option value="apr9">April 9 8:00pm</option>
                 </select>
-                </div>
+            </div>
 
-                <div class="input-field col s4">
-                  <select id="ticketType">
+            <div class="input-field col s4">
+              <select id="ticketType">
                   <option value="" disabled selected>Select Type</option>
                   <option value="17">General Admission $17</option>
                   <option value="12">Cornish Alum $12</option>
                 </select>
-                </div>
+            </div>
 
-                <div class="input-field col s4">
-                  <select id="ticketNumber">
+            <div class="input-field col s4">
+              <select id="ticketNumber">
                    <option value="" disabled selected>Select Number of Tickets</option>
                    <option value="1">1</option>
                    <option value="2">2</option>
@@ -90,44 +91,46 @@
                    <option value="5">5</option>
                    <option value="6">6</option>
                 </select>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col l12">
-                  <p id="subtotal"> Subtotal: $0</p>
-                </div>
-              </div>
-
-
-            </div>
-            <div class="modal-footer">
-              <a href="./tickets.html" class="modal-action modal-close waves-effect waves-green btn-flat ">Go to Billing</a>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col l12">
+              <p id="subtotal"> Subtotal: $0</p>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <a href="./tickets.html" class="modal-action modal-close waves-effect waves-green btn-flat ">Go to Billing</a>
         </div>
       </div>
+  </div>
+  </div>
 
-      <div class="divider"></div>
+  <div class="divider"></div>
+</br>-->
 
-      <div id="show1" class="row">
-        <div id="show1pic" class="col l5 s12">
-        </div>
-        <div id="show1art" class="col l7 s12">
-        </div>
-      </div>
-
-      <div class="divider"></div>
-
-    <div id="show2" class="row">
-      <div id="show2pic" class="col l5 s12">
-      </div>
-      <div id="show2art" class="col l7 s12">
-      </div>
+  <div id="show1" class="row">
+    <div id="show1pic" class="col l5 s12">
     </div>
+    <div id="show1art" class="col l7 s12">
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  </br>
+
+  <div id="show2" class="row">
+    <div id="show2pic" class="col l5 s12">
+    </div>
+    <div id="show2art" class="col l7 s12">
+    </div>
+  </div>
 
 
-    </main>
+  </main>
   </div>
 
   <footer class="page-footer">

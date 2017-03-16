@@ -15,6 +15,10 @@ main {
   height: 85px;
 }
 
+nav img {
+  align-items: center;
+}
+
 footer.page-footer {
   background-color: #288f84;
   text-align: center;

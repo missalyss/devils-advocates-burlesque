@@ -109,7 +109,7 @@ function appendArticle(i, picLocation, artLocation) {
      </div>`
 
   $(picLocation).append(
-      `<img src="${upcoming[i].img}" alt="${upcoming[i].imgAlt}">`
+      `<img class="responsive-img" src="${upcoming[i].img}" alt="${upcoming[i].imgAlt}">`
   )
 $(artLocation).append(
       upcomObjInfo + modalBtn + modalGuts

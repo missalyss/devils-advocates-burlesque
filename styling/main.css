@@ -49,13 +49,11 @@ h2, h3 {
 }
 
 .carousel{
-  /*height: 900px;*/
   overflow: visible;
-  /*display: flex;*/
 }
 
 .gallery-main{
-  width: 100%;
+  /*width: 1200px;*/
 }
 
 #gal-footer {

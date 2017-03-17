@@ -103,7 +103,7 @@ var br = `</br>`
 //APPEND OBJECTS INTO MAIN BODY
 function appendArticle() {
     for (var i = 0; i < cast.length; i++) {
-        $('.performer-main').append(rowOpen + pictureColOpen + `<img src="${cast[i].img}" alt="${cast[i].imgAlt}">` + divClose + articleColOpen + `<h3>${cast[i].name}</h3>` + `<p>${cast[i].about}</p>` +
+        $('.performer-main').append(rowOpen + pictureColOpen + `<img class="responsive-img" src="${cast[i].img}" alt="${cast[i].imgAlt}">` + divClose + articleColOpen + `<h3>${cast[i].name}</h3>` + `<p>${cast[i].about}</p>` +
         `<p><a href="${cast[i].facebook}"><img src="./images/facebook-icon.png" alt="${cast[i].name} Facebook"></a><a href="${cast[i].insta}"><img src="./images/instagram-icon.png" alt="${cast[i].name} Instagram"></a></p>` + divClose + divClose + `<div class="divider"></div>` + br)
     }
 }

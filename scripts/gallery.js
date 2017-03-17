@@ -34,7 +34,7 @@ var gallery = [
 function appendGallery() {
     for (var i = 0; i < gallery.length; i++) {
         $('.carousel').append(
-          `<a class="carousel-item" href="${gallery[i].id}!"><img src="./images/burlesque/gallery/${gallery[i].photo}" alt="${gallery[i].photo}"></a>`
+          `<a class="carousel-item" href="${gallery[i].id}!"><img class="responsive-img" src="./images/burlesque/gallery/${gallery[i].photo}" alt="${gallery[i].photo}"></a>`
         )
     }
 }

@@ -1,9 +1,5 @@
 $(document).ready(function(){
-      $('.carousel').carousel({
-
-
-      });
-
+      $('.carousel').carousel();
    });
 
 
@@ -24,9 +20,9 @@ var gallery = [
   {id: '#fourteen', photo: 'da14.jpg'},
   {id: '#fifteen', photo: 'da15.jpg'},
   {id: '#sixteen', photo: 'da16.jpg'},
-  {id: '#seventeen', photo: 'da17.jpg'},
+  {id: '#twentytwo', photo: 'da22.jpg'},
   {id: '#twentyfive', photo: 'da25.jpg'},
-  {id: '#eighteen', photo: 'Behind_the_Scenes_The_Devils_Advocates-13.jpg'}
+  {id: '#nineteen', photo: 'Behind_the_Scenes_The_Devils_Advocates-13.jpg'}
  ]
 
 
@@ -39,13 +35,4 @@ function appendGallery() {
     }
 }
 
-console.log(appendGallery())
-
-
-// <div class="carousel">
-//   <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/250/250/nature/1"></a>
-//   <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/250/250/nature/2"></a>
-//   <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/250/250/nature/3"></a>
-//   <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/250/250/nature/4"></a>
-//   <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/nature/5"></a>
-// </div>
+appendGallery()

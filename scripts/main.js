@@ -24,13 +24,13 @@ var upcoming = [{
         about: "Now what are the possibilities of warp drive? Cmdr Riker's nervous system has been invaded by an unknown microorganism. The organisms fuse to the nerve, intertwining at the molecular level. That's why the transporter's biofilters couldn't extract it. The vertex waves show a K-complex corresponding to an REM state. The engineering section's critical. Destruction is imminent. Their robes contain ultritium, highly explosive, virtually undetectable by your transporter."
     },
     {
-        img: `<img src="./images/burlesque/gallery/da27-cropped.jpg" alt="Flora and Fauna">`,
+        img: `<img class="responsive-img" src="./images/burlesque/gallery/da27-cropped.jpg" alt="Flora and Fauna">`,
         title: "Don't miss our upcoming show: Flora and Fauna!",
         subtitle: "April 8, 9, 10",
         about: "Now what are the possibilities of warp drive? Cmdr Riker's nervous system has been invaded by an unknown microorganism. The organisms fuse to the nerve, intertwining at the molecular level. That's why the transporter's biofilters couldn't extract it. The vertex waves show a K-complex corresponding to an REM state. The engineering section's critical. Destruction is imminent. Their robes contain ultritium, highly explosive, virtually undetectable by your transporter."
     },
     {
-        img: `<img src="./images/burlesque/The_Devils_Advocates_Burlesque_sq-cropped.jpg" alt="We are Devil's Avocates">`,
+        img: `<img class="responsive-img" src="./images/burlesque/The_Devils_Advocates_Burlesque_sq-cropped.jpg" alt="We are Devil's Avocates">`,
         title: "Devil's Advocates are thinking of starting a Cabaret. Wanna get on board?",
         subtitle: "Send us an email today!",
         about: "Now what are the possibilities of warp drive? Cmdr Riker's nervous system has been invaded by an unknown microorganism. The organisms fuse to the nerve, intertwining at the molecular level. That's why the transporter's biofilters couldn't extract it. The vertex waves show a K-complex corresponding to an REM state. The engineering section's critical. Destruction is imminent. Their robes contain ultritium, highly explosive, virtually undetectable by your transporter."

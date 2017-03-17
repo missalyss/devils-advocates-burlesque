@@ -100,7 +100,7 @@ function appendArticle(i, picLocation, artLocation) {
      <p>${upcoming[i].about}</p>
      <div class="row">` + modalSelectDate + modalSelectType + modalSelectAmount + `</div>` + modalSubtotal +
      `<div class="modal-footer">
-     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
+     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat cancel">Cancel</a>
      <a href="./tickets.html" class="modal-action modal-close waves-effect waves-green btn-flat">Add to Cart</a>
      </div>
      </div>
@@ -112,6 +112,9 @@ function appendArticle(i, picLocation, artLocation) {
 $(artLocation).append(
       upcomObjInfo + modalBtn + modalGuts
   )
+  localStorage.setItem("this-show-name", upcoming[i].title)
+  localStorage.setItem("this-show-pic", upcoming[i].img)
+  console.log(localStorage);
 }
 
 appendArticle(1, '#show2pic', '#show2art')
@@ -120,15 +123,23 @@ appendArticle(1, '#show2pic', '#show2art')
 $('#ticketNumber, #ticketType').on('change', function(){
     var numOfTix = $('#ticketNumber').val()
     var typeOfTix = $('#ticketType').val()
+    var tickDate =$('#ticketDate').val()
     var subResult = numOfTix * typeOfTix
 
     $('#subtotal').replaceWith(function() {
         return `<p id="subtotal">Subtotal: $${subResult}</p>`;
     })
     var cart = [
-        numOfTix, typeOfTix, subResult
+        numOfTix, typeOfTix, subResult, tickDate
     ]
     localStorage.setItem("tixQuant", cart[0])
     localStorage.setItem("tixType", cart[1])
     localStorage.setItem("subCost", cart[2])
+    localStorage.setItem("tixDate", cart[3])
   })
+
+  $('.cancel').click( function() {
+  window.localStorage.clear();
+  location.reload();
+  return false;
+  });

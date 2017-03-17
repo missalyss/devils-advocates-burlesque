@@ -1,14 +1,3 @@
-//
-// $('.this-event').append(
-//     `<img src="${upcoming[i].img}" alt="${upcoming[i].imgAlt}">`
-// )
-
-//on 'click' of the modal button... the name date and all the shit become local data? and the modal is appended? no that's crazy talk.
-
-
-// $('.this-event').append(
-//     upcomObjInfo + modalBtn + modalGuts
-// )
 
 $('#tix-quantity').append(
     "Tickets: " + localStorage.getItem("tixQuant")
@@ -17,6 +6,12 @@ $('#price-total').append(
     "Total: $" + localStorage.getItem("subCost")
 )
 
+$('#show-pic').append(
+    `<img src="${localStorage.getItem("this-show-pic")}" alt="">`
+)
+$('#show-name').prepend(
+    `<h3>${localStorage.getItem("this-show-name")}</h3>`
+)
 
 $('#email-setup').on('submit', function(e) {
     e.preventDefault()
@@ -35,12 +30,15 @@ $('#email-setup').on('submit', function(e) {
             subject: 'Tickets for Devil\'s Advocates Burlesque',
             text: $firstName + ' ' + $lastName + ',\n\
             \n\
-            Thank you for your recent purchase to Devil\'s Advocates upcoming show, "Flora and Fauna."\n\
+            Thank you for your recent purchase to Devil\'s Advocates upcoming show, "' +
+            localStorage.getItem("this-show-name") + '"\n\
             You have purchased\n' +
-                localStorage.getItem("tixQuant") + ' tickets for \n\
-            April 7 at 8:00pm\n\
+            localStorage.getItem("tixQuant") + ' tickets for \n\
+            '
+            +localStorage.getItem("tixDate")+ '\n\
             Total:' + localStorage.getItem("subCost") + '\n\
-            Please keep this email, as this is your receipt and ticket into the show. \n\
+            \n\
+            Please keep this email! It is your receipt and your Will Call ticket. Please bring your ID to verify your tickets. If you selected the Cornish Alum ticket type, make sure you bring your student ID!\n\
             We are excited to see you there! \n\
             \n\
             With love,\n\
@@ -51,7 +49,8 @@ $('#email-setup').on('submit', function(e) {
         }
     }).then(function(result) {
         console.log(result);
+        window.location.href = "./ticketsredirect.html"
     }).catch(function(error) {
-        console.log('Errorrrrrrrrrrrrrr:', error); //also can console.error
+        console.log('Errorrrrrrrrrrrrrr:', error);
     })
 })

@@ -18,6 +18,11 @@ nav {
 
 .logo {
   float: left;
+  height: 100px;
+}
+
+a {
+  font-size: 1.4rem;
 }
 
 
@@ -41,6 +46,12 @@ h2, h3 {
   text-align: left;
   color: #6e0f77;
   font-size: 3rem;
+}
+
+.receipt p {
+  /*text-align: center;*/
+  color: #6e0f77;
+  font-size: 1.5rem;
 }
 
 footer.page-footer {

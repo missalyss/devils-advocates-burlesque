@@ -19,17 +19,17 @@ var upcoming = [{
     img: "http://fillmurray.com/300/300",
     imgAlt: "this is picture",
     title: "Den of Indecency",
-    date: "March 3, 11:00pm",
+    date: ["March 3, 11:00pm"],
     tixAvailable: 20,
     price: [17, 12],
     about: "Now what are the possibilities of warp drive? Cmdr Riker's nervous system has been invaded by an unknown microorganism. The organisms fuse to the nerve, intertwining at the molecular level. That's why the transporter's biofilters couldn't extract it. The vertex waves show a K-complex corresponding to an REM state. The engineering section's critical. Destruction is imminent. Their robes contain ultritium, highly explosive, virtually undetectable by your transporter."
 },
 {
     id: '1',
-    img: "http://fillmurray.com/300/300",
-    imgAlt: "this is picture",
-    title: "this is a show",
-    date: "April 8, 9, 10 show time",
+    img: "./images/burlesque/The_Devils_Advocates_Burlesque_sq-cropped.jpg",
+    imgAlt: "Flora and Fauna",
+    title: "Flora and Fauna",
+    date: ["Fri April 7th 8:00pm", " Sat April 8th 8:00pm", " Sun April 9th 8:00pm"],
     tixAvailable: 20,
     price: [17, 12],
     about: "Communication is not possible. The shuttle has no power. Using the gravitational pull of a star to slingshot back in time? We are going to Starbase Montgomery for Engineering consultations prompted by minor read-out anomalies. Probes have recorded unusual levels of geological activity in all five planetary systems. Assemble a team. Look at records of the Drema quadrant. Would these scans detect artificial transmissions as well as natural signals?"
@@ -39,7 +39,7 @@ var upcoming = [{
     img: "http://fillmurray.com/350/350",
     imgAlt: "this is picture",
     title: "Guilty Pleasures",
-    date: "May 5 11:00pm",
+    date: ["May 5 11:00pm"],
     tixAvailable: 20,
     price: [17, 12],
     about: "Deflector power at maximum. Energy discharge in six seconds. Warp reactor core primary coolant failure. Fluctuate phaser resonance frequencies. Resistance is futile. Recommend we adjust shield harmonics to the upper EM band when proceeding. These appear to be some kind of power-wave-guide conduits which allow them to work collectively as they perform ship functions. Increase deflector modulation to upper frequency band. Resistance is futile."
@@ -60,7 +60,9 @@ function appendArticle(i, picLocation, artLocation) {
   <div class="input-field col s4">
     <select id="ticketDate">
       <option disabled selected>Select Date</option>
-      <option value="apr7">${upcoming[i].date}</option>
+      <option value="${upcoming[i].date[0]}">${upcoming[i].date[0]}</option>
+      <option value="${upcoming[i].date[1]}">${upcoming[i].date[1]}</option>
+      <option value="${upcoming[i].date[2]}">${upcoming[i].date[2]}</option>
     </select>
   </div>`
 
@@ -100,8 +102,8 @@ function appendArticle(i, picLocation, artLocation) {
      <p>${upcoming[i].about}</p>
      <div class="row">` + modalSelectDate + modalSelectType + modalSelectAmount + `</div>` + modalSubtotal +
      `<div class="modal-footer">
-     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat cancel">Cancel</a>
      <a href="./tickets.html" class="modal-action modal-close waves-effect waves-green btn-flat">Add to Cart</a>
+     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat cancel">Cancel</a>
      </div>
      </div>
      </div>`

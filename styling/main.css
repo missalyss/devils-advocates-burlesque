@@ -12,6 +12,10 @@ main {
   flex: 1 0 auto;
 }
 
+p {
+  font-size: 18px;
+}
+
 nav {
   background-color: #2b9a8e;
 }

@@ -1,14 +1,14 @@
-//Eventually, this page will become a legitimate checkout when I have a server for this. subResult will get saved in the server and transfer to this page. $('#total').replaceWith(subResult) basically.
+//
+// $('.this-event').append(
+//     `<img src="${upcoming[i].img}" alt="${upcoming[i].imgAlt}">`
+// )
 
-//LOL I'M NOT SURE WHAT THIS IS
-// $('input.autocomplete').autocomplete({
-//    data: {
-//      "Apple": null,
-//      "Microsoft": null,
-//      "Google": 'http://placehold.it/250x250'
-//    },
-//    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
-//  });
+//on 'click' of the modal button... the name date and all the shit become local data? and the modal is appended? no that's crazy talk.
+
+
+// $('.this-event').append(
+//     upcomObjInfo + modalBtn + modalGuts
+// )
 
 $('#tix-quantity').append(
     "Tickets: " + localStorage.getItem("tixQuant")

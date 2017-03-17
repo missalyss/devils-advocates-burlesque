@@ -94,13 +94,14 @@ function appendArticle(i, picLocation, artLocation) {
   </div>`
 
   var modalGuts =
-      `<div id="${upcoming[i].id}" class="modal modal-fixed-footer">
+      `<div id="${upcoming[i].id}" class="modal">
      <div class="modal-content">
      <h4>${upcoming[i].title}</h4>
      <p>${upcoming[i].about}</p>
      <div class="row">` + modalSelectDate + modalSelectType + modalSelectAmount + `</div>` + modalSubtotal +
      `<div class="modal-footer">
-     <a href="./tickets.html" class="modal-action modal-close waves-effect waves-green btn-flat ">Checkout</a>
+     <a href="./tickets.html" id="addCart" class="modal-action modal-close waves-effect waves-green btn-flat">Add to Cart</a>
+     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
      </div>
      </div>
      </div>`
@@ -108,50 +109,35 @@ function appendArticle(i, picLocation, artLocation) {
   $(picLocation).append(
       `<img src="${upcoming[i].img}" alt="${upcoming[i].imgAlt}">`
   )
-  $(artLocation).append(
+$(artLocation).append(
       upcomObjInfo + modalBtn + modalGuts
   )
 }
 
-appendArticle(2, '#show2pic', '#show2art')
+appendArticle(1, '#show2pic', '#show2art')
 
-// function subtotalStorage() {
-//   console.log($('#ticketNumber').val());
-//     var numOfTix = $('#ticketNumber').val()
-//     var typeOfTix = $('#ticketType').val()
-//     var result
-//     var subResult = numOfTix * typeOfTix
-//     console.log(numOfTix, typeOfTix, subResult);
-//     $('#subtotal').replaceWith(function() {
-//         result = `<p id="subtotal">Subtotal: $${subResult}</p>`;
-//         return result;
-//     })
-//     // var cart = [
-//     //     numOfTix, typeOfTix, subResult
-//     // ]
-//     // localStorage.setItem("tixQuant", cart[0])
-//     // localStorage.setItem("tixType", cart[1])
-//     // localStorage.setItem("subCost", cart[2])
-// }
+var numOfTix;
+var typeOfTix;
+var subResult;
 
-
-$('#ticketNumber').on('change', function(){
+$('#ticketNumber, #ticketType').on('change', function(){
   console.log($('#ticketNumber').val());
-    var numOfTix = $('#ticketNumber').val()
-    var typeOfTix = $('#ticketType').val()
+    numOfTix = $('#ticketNumber').val()
+    typeOfTix = $('#ticketType').val()
     var result
-    var subResult = numOfTix * typeOfTix
+    subResult = numOfTix * typeOfTix
     console.log(numOfTix, typeOfTix, subResult);
     $('#subtotal').replaceWith(function() {
         result = `<p id="subtotal">Subtotal: $${subResult}</p>`;
         return result;
     })
-    var cart = [
-        numOfTix, typeOfTix, subResult
-    ]
-    localStorage.setItem("tixQuant", cart[0])
-    localStorage.setItem("tixType", cart[1])
-    localStorage.setItem("subCost", cart[2])
   })
 
-$('.container').on('click', console.log("hello"))
+  var cart = [
+    numOfTix, typeOfTix, subResult
+  ]
+$('#addCart').on('click', function(){
+  localStorage.setItem("tixQuant", cart[0])
+  localStorage.setItem("tixType", cart[1])
+  localStorage.setItem("subCost", cart[2])
+})

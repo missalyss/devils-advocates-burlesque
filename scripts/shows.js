@@ -100,8 +100,8 @@ function appendArticle(i, picLocation, artLocation) {
      <p>${upcoming[i].about}</p>
      <div class="row">` + modalSelectDate + modalSelectType + modalSelectAmount + `</div>` + modalSubtotal +
      `<div class="modal-footer">
-     <a href="./tickets.html" id="addCart" class="modal-action modal-close waves-effect waves-green btn-flat">Add to Cart</a>
      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
+     <a href="./tickets.html" class="modal-action modal-close waves-effect waves-green btn-flat">Add to Cart</a>
      </div>
      </div>
      </div>`
@@ -116,28 +116,19 @@ $(artLocation).append(
 
 appendArticle(1, '#show2pic', '#show2art')
 
-var numOfTix;
-var typeOfTix;
-var subResult;
 
 $('#ticketNumber, #ticketType').on('change', function(){
-  console.log($('#ticketNumber').val());
-    numOfTix = $('#ticketNumber').val()
-    typeOfTix = $('#ticketType').val()
-    var result
-    subResult = numOfTix * typeOfTix
-    console.log(numOfTix, typeOfTix, subResult);
-    $('#subtotal').replaceWith(function() {
-        result = `<p id="subtotal">Subtotal: $${subResult}</p>`;
-        return result;
-    })
-  })
+    var numOfTix = $('#ticketNumber').val()
+    var typeOfTix = $('#ticketType').val()
+    var subResult = numOfTix * typeOfTix
 
-  var cart = [
-    numOfTix, typeOfTix, subResult
-  ]
-$('#addCart').on('click', function(){
-  localStorage.setItem("tixQuant", cart[0])
-  localStorage.setItem("tixType", cart[1])
-  localStorage.setItem("subCost", cart[2])
-})
+    $('#subtotal').replaceWith(function() {
+        return `<p id="subtotal">Subtotal: $${subResult}</p>`;
+    })
+    var cart = [
+        numOfTix, typeOfTix, subResult
+    ]
+    localStorage.setItem("tixQuant", cart[0])
+    localStorage.setItem("tixType", cart[1])
+    localStorage.setItem("subCost", cart[2])
+  })

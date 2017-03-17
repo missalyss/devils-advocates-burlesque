@@ -26,7 +26,7 @@ var upcoming = [{
 },
 {
     id: '1',
-    img: "./images/burlesque/The_Devils_Advocates_Burlesque_sq-cropped.jpg",
+    img: "./images/burlesque/gallery/da26-cropped.jpg",
     imgAlt: "Flora and Fauna",
     title: "Flora and Fauna",
     date: ["Fri April 7th 8:00pm", " Sat April 8th 8:00pm", " Sun April 9th 8:00pm"],

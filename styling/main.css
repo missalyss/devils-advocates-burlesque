@@ -48,6 +48,24 @@ h2, h3 {
   font-size: 3rem;
 }
 
+.carousel{
+  /*height: 900px;*/
+  overflow: visible;
+  /*display: flex;*/
+}
+
+.gallery-main{
+  width: 100%;
+}
+
+#gal-footer {
+  margin-top: 360px;
+}
+
+.carousel .carousel-item {
+  width: 550px;
+}
+
 .receipt p {
   /*text-align: center;*/
   color: #6e0f77;

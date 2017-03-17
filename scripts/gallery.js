@@ -1,11 +1,15 @@
 $(document).ready(function(){
-      $('.carousel').carousel({fullWidth: true});
+      $('.carousel').carousel({
+
+
+      });
+
    });
 
 
 var gallery = [
   {id: '#one', photo: 'da1.jpg'},
-   {id: '#two', photo: 'da2.jpg'},
+  //  {id: '#two', photo: 'da2.jpg'},
    {id: '#three', photo: 'da3.jpg'},
    {id: '#four', photo: 'da4.jpg'},
    {id: '#five', photo: 'da5.jpg'},
@@ -20,7 +24,10 @@ var gallery = [
   {id: '#fourteen', photo: 'da14.jpg'},
   {id: '#fifteen', photo: 'da15.jpg'},
   {id: '#sixteen', photo: 'da16.jpg'},
-  {id: '#seventeen', photo: 'da17.jpg'} ]
+  {id: '#seventeen', photo: 'da17.jpg'},
+  {id: '#twentyfive', photo: 'da25.jpg'},
+  {id: '#eighteen', photo: 'Behind_the_Scenes_The_Devils_Advocates-13.jpg'}
+ ]
 
 
 //APPEND PHOTOS INTO MAIN BODY

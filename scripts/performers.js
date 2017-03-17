@@ -27,7 +27,7 @@ var cast = [{
     {
         img: "./images/burlesque/Gin-cropped.jpg",
         imgAlt: "Gin Atomic",
-        facebook: "#",
+        facebook: "https://www.facebook.com/profile.php?id=100011373623204",
         insta: "#",
         name: "Gin Atomic",
         about: "Gin Atomic is not just your average white trash, seductive, gaudy women who likes to kick her legs way above her head, no, no, no.  She provides just the right amount of spice, promiscuity and unattractive facial expressions to make any audience member question their idea of sexy. Inspired by women who don't give a fuck, the over use of red lip stick, and feminists everywhere, Gin Atomic is anything but average."
@@ -35,7 +35,7 @@ var cast = [{
     {
         img: "./images/burlesque/Foxx5-cropped.jpg",
         imgAlt: "StarFoxx LaCloud",
-        facebook: "#",
+        facebook: "https://www.facebook.com/foxx.lacloud",
         insta: "#",
         name: "StarFoxx LaCloud",
         about: "Foxx LaCloud is goofy AF. A shameless geek, Foxx is always down for a good time, whether it’s a night-in of Star Trek And Chill, or energetically failing at bowling. Her playful nature may make her seem carefree and naïve, but don’t think for a minute that she’s gonna take your shit. A member of Devil’s Advocates Burlesque Troupe, come watch Foxx get silly and sexy this October 7th at the Rendezvous Jewel Box Theatre in “Miss Effie Dubois’ Den of Indecency”!"
@@ -51,7 +51,7 @@ var cast = [{
     {
         img: "./images/burlesque/Jax-cropped.jpg",
         imgAlt: "Jax Mourningwood",
-        facebook: "#",
+        facebook: "https://www.facebook.com/ryanfostermcatee",
         insta: "#",
         name: "Jax Mourningwood",
         about: "Jax Mourningwood is a super-flexible Lumbersexual certain to leave you with wood. Somewhere between dungeon kink and showboi glamour, he always aims to please. Don't miss out on this flannel-flocked fella and his friend Miss Effie DuBois' Den of Indecency October 7th!"
@@ -59,7 +59,7 @@ var cast = [{
     {
         img: "./images/burlesque/Delica-cropped.jpg",
         imgAlt: "Delicatessen",
-        facebook: "#",
+        facebook: "https://www.facebook.com/profile.php?id=100008203842446",
         insta: "#",
         name: "Delicatessen",
         about: "Delicatessen, the dame of deliciousness is a damsel of the Jazz Age. She jumped on a circus train in 1924 and never looked back. Harkening back to a time where taboos were dangerous and the lustre of a traveling circus was the best entertainment around, she will tiptoe to the edge of indecency, dancing right on your edge. Let her delight you with her high-kicks and fancy feet then scintillate your senses with silky swivels. However it's not all rhinestones and feather boas - there's a scrappy circus carny hiding in there, waiting to show you something dark, sensual and forbidden from the Peep Show Tent."
@@ -67,7 +67,7 @@ var cast = [{
     {
         img: "./images/burlesque/Tout-cropped.jpg",
         imgAlt: "Tout d'Lou",
-        facebook: "#",
+        facebook: "https://www.facebook.com/tout.dlou",
         insta: "#",
         name: "Tout d'Lou",
         about: "Tout d'Lou is a runaway mime child on the loose! At the young age of 13, he ran away from home in order to join the circus to share his talent of getting into trouble with the world. Throughout his travels he ran into the worlds most beautiful creatures, who taught him that body language could carry on a conversation better than words every could. Now with his new found talents, he can trap you in a box you never want to find your way out of!"
@@ -75,7 +75,7 @@ var cast = [{
     {
         img: "./images/burlesque/Mystic-cropped.jpg",
         imgAlt: "Mystic Deflowered",
-        facebook: "#",
+        facebook: "https://www.facebook.com/angela.praz",
         insta: "#",
         name: "Mystic Deflowered",
         about: "Mystic Deflowered is a psychedelic daydream--strung out and ready for adventure. Although her background is a full life in dance and theatre, she gains inspiration from creating visual art and attempting to communicate her deepest, strangest visions. She most recently produced Tease the Season: a Sexy Summer Hotliday Extravaganza and Vices: a Burlesque, commonly performs with the troupe Lady's Luck, and is thrilled to have a new family with the Devil's Advocates."
@@ -83,7 +83,7 @@ var cast = [{
     {
         img: "./images/burlesque/Effie-cropped.jpg",
         imgAlt: "Effie DuBois",
-        facebook: "#",
+        facebook: "https://www.facebook.com/effie.dubois.33",
         insta: "#",
         name: "Effie DuBois",
         about: "Miss Effie DuBois: A child of the Jazz age, lover of Bohemia, and your resident bad poet. Born out of the under belly of the golden age of America, she's the perfect combination of tragic starlet, debutante and liquor influenced bad decisions. Also the principal dancer for Beacoup's Productions, you can catch her shedding a few tears and a few articles of clothing alongside her glitter family within the Devils Advocates!"

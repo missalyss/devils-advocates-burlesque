@@ -19,7 +19,6 @@ $('#email-setup').on('submit', function(e) {
     var $firstName = $('#first_name').val()
     var $lastName = $('#last_name').val()
 
-
     $.ajax({
         url: 'http://galvanize-cors-proxy.herokuapp.com/https://api.mailgun.net/v3/sandbox2fe140c527144a9285414c87b24372b2.mailgun.org/messages',
         method: "POST",

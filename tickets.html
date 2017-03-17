@@ -63,26 +63,63 @@
       <form id="email-setup" class="col s12">
 
         <div class="row">
-          <div class="input-field col s6">
+          <h5>Contact:</h5>
+          <div class="input-field col l4 s12">
             <input id="first_name" type="text" class="validate">
             <label for="first_name">First Name</label>
           </div>
-          <div class="input-field col s6">
+          <div class="input-field col l4 s12">
             <input id="last_name" type="text" class="validate">
             <label for="last_name">Last Name</label>
+          </div>
+            <div class="input-field col l4 s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+
+
+        <div class="row">
+          <h5>Billing Address:</h5>
+          <div class="input-field col l5 s12">
+            <input id="address" type="text" class="validate">
+            <label for="address">Address</label>
+          </div>
+
+          <div class="input-field col l4 s6">
+            <input id="city" type="text" class="validate">
+            <label for="city">City</label>
+          </div>
+
+          <div class="input-field col l1 s3">
+            <input id="state" type="text" class="validate">
+            <label for="state">State</label>
+          </div>
+
+          <div class="input-field col l2 s3">
+            <input id="zip" type="text" class="validate">
+            <label for="zip">Zip Code</label>
           </div>
         </div>
 
         <div class="row">
-          <div class="input-field col s6">
-            <input id="email" type="email" class="validate">
-            <label for="email">Email</label>
+
+          <div class="input-field col l7 s6">
+            <input id="ccNum" type="number" class="validate">
+            <label for="ccNum">Credit Card Number</label>
           </div>
-          <div class="input-field col s6">
-            <input id="telephone" type="tel" class="validate">
-            <label for="telephone">Phone Number</label>
+          <div class="input-field col l3 s3">
+            <input id="exp" type="month" class="validate">
+            <!-- <label for="exp">Expiration</label> -->
           </div>
+          <div class="input-field col l2 s3">
+            <input id="cvc" type="text" class="validate">
+            <label for="cvc">CVC</label>
+          </div>
+
         </div>
+
+
         <input type="submit" name="" value="Submit">
         <input class="cancel" type="button" name="" value="Cancel">
       </form>

@@ -34,9 +34,9 @@ $('#email-setup').on('submit', function(e) {
             'You have purchased'+'\n' + '\n' +
             localStorage.getItem("tixQuant") + ' tickets for '
             +localStorage.getItem("tixDate")+ '.'+'\n'+
-            'Total: $' + localStorage.getItem("subCost") + '\n' + '\n'+
-            'Please keep this email! It is your receipt and your Will Call ticket. Please bring your ID to verify your tickets. If you selected the Cornish Alum ticket type, make sure you bring your student ID!'+'\n'+
-            'We are excited to see you there!'+ '\n'+
+            'Total: $' + localStorage.getItem("subCost") + '\n' +
+            'Please keep this email! It is your receipt and your Will Call ticket. Please bring your ID to verify your tickets.' + '\n' + 'If you selected the Cornish Alum ticket type, make sure you bring your student ID.'+'\n'+
+            'See you there!'+ '\n'+
             '\n'+
             'With love,'+'\n'+
             'The Devil\'s Advocates'

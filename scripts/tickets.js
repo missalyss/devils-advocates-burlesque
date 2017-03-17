@@ -20,7 +20,7 @@ $('#email-setup').on('submit', function(e) {
     var $lastName = $('#last_name').val()
 
     $.ajax({
-        url: 'http://galvanize-cors-proxy.herokuapp.com/https://api.mailgun.net/v3/sandbox2fe140c527144a9285414c87b24372b2.mailgun.org/messages',
+        url: 'https://galvanize-cors-proxy.herokuapp.com/https://api.mailgun.net/v3/sandbox2fe140c527144a9285414c87b24372b2.mailgun.org/messages',
         method: "POST",
         dataType: 'json',
         data: {
@@ -34,8 +34,7 @@ $('#email-setup').on('submit', function(e) {
             'You have purchased'+'\n' + '\n' +
             localStorage.getItem("tixQuant") + ' tickets for '
             +localStorage.getItem("tixDate")+ '.'+'\n'+
-            'Total: $' + localStorage.getItem("subCost") + '\n' +
-            '\n'+
+            'Total: $' + localStorage.getItem("subCost") + '\n' + '\n'+
             'Please keep this email! It is your receipt and your Will Call ticket. Please bring your ID to verify your tickets. If you selected the Cornish Alum ticket type, make sure you bring your student ID!'+'\n'+
             'We are excited to see you there!'+ '\n'+
             '\n'+

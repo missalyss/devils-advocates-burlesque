@@ -1,5 +1,3 @@
-console.log("sanity cheeeck");
-
 var cast = [{
         img: "./images/burlesque/WillyNilly2-cropped.jpg",
         imgAlt: "Willy Nilly",

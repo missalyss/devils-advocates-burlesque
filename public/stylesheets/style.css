@@ -1,8 +1,73 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  font-size: 16px;
+  font-family: Gill Sans, sans-serif;
+  font-weight: lighter;
 }
 
-a {
-  color: #00B7FF;
+main {
+  flex: 1 0 auto;
+}
+
+p {
+  font-size: 18px;
+}
+
+nav {
+  background-color: #2b9a8e;
+}
+
+.logo {
+  float: left;
+  height: 100px;
+}
+
+
+.right {
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+main h1 {
+  font-family: Victoriandeco Regular, Gill Sans, sans-serif;
+  text-align: center;
+  color: #6e0f77;
+  font-size: 6rem;
+}
+
+h2, h3 {
+  font-family: Gill Sans, sans-serif;
+  font-weight: lighter;
+  font-stretch: expanded;
+  text-align: left;
+  color: #6e0f77;
+  font-size: 3rem;
+}
+
+.carousel{
+  overflow: visible;
+}
+
+
+#gal-footer {
+  margin-top: 360px;
+}
+
+.carousel .carousel-item {
+  width: 550px;
+}
+
+.receipt p {
+  /*text-align: center;*/
+  color: #6e0f77;
+  font-size: 1.5rem;
+}
+
+footer.page-footer {
+  background-color: #2b9a8e;
+  text-align: center;
 }
